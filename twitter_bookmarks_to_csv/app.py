@@ -4,8 +4,12 @@ from io import StringIO
 from json import JSONDecodeError
 from typing import Dict, List
 
+import sentry_sdk
 from flask import Flask, make_response, render_template, request
 from pydantic import BaseModel, ValidationError
+from sentry_sdk.integrations.flask import FlaskIntegration
+
+sentry_sdk.init(integrations=[FlaskIntegration()], traces_sample_rate=1.0)
 
 app = Flask(__name__)
 
