@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "twitter-bookmarks-to-csv"
+version = "1.0.0"
+description = "Convert Twitter Bookmarks from JSON to CSV"
+readme = "README.md"
+homepage = "https://github.com/imankulov/twitter-bookmarks-to-csv"
+repository = "https://github.com/imankulov/twitter-bookmarks-to-csv"
+authors = ["Roman Imankulov <roman.imankulov@gmail.com>"]
+license = "MIT"
+classifiers = [
+    "Intended Audience :: Developers",
+    ]
+include = [
+    "CHANGELOG.md"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.2"
+black = "^20.8b1"
+flake8 = "^3.8.4"
+
+[build-system]
+requires = ["poetry>=1.0.5"]
+build-backend = "poetry.masonry.api"
