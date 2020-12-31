@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block body %}
+<p class="text-muted">Import Twitter bookmarks to CSV</p>
+
+<form method="post" action="{{ url_for('table') }}">
+  <div class="form-group">
+    {% if error %}
+    <div class="text-danger">
+      {{ error }}
+    </div>
+    {% else %}
+    <label for="id_bookmarks">
+      Enter your bookmarks content below
+    </label>
+    {% endif %}
+    <textarea class="form-control{% if error %} is-invalid{% endif %}" id="id_bookmarks" name="bookmarks" rows="20">
+{{ bookmarks_raw }}</textarea
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">Convert to CSV</button>
+</form>
+
+{% endblock %}

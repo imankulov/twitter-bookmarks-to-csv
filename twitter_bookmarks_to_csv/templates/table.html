@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block body %}
+
+<p class="text-muted">Import Twitter bookmarks to CSV</p>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Created At</th>
+        <th scope="col">ID</th>
+        <th scope="col">Text</th>
+        <th scope="col">User ID</th>
+        <th scope="col">Retweets</th>
+        <th scope="col">Favorites</th>
+        <th scope="col">Replies</th>
+        <th scope="col">Quotes</th>
+        <th scope="col">Conversation ID</th>
+        <th scope="col">Lang</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bookmark in bookmarks %}
+      <tr>
+        <td>{{ bookmark.created_at }}</td>
+        <td>{{ bookmark.id_str }}</td>
+        <td>{{ bookmark.full_text }}</td>
+        <td>{{ bookmark.user_id_str }}</td>
+        <td>{{ bookmark.retweet_count }}</td>
+        <td>{{ bookmark.favorite_count }}</td>
+        <td>{{ bookmark.quote_count }}</td>
+        <td>{{ bookmark.conversation_id_str }}</td>
+        <td>{{ bookmark.lang }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<form method="post" action="{{ url_for('export') }}">
+  <input type="hidden" value="{{ bookmarks_raw }}" name="bookmarks" />
+  <button type="submit" class="btn btn-primary">Download as CSV</button>
+</form>
+
+{% endblock %}

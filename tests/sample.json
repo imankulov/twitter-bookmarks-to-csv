@@ -1,0 +1,240 @@
+{
+  "globalObjects": {
+    "tweets": {
+      "1234": {
+        "created_at": "Sun Dec 27 15:10:13 +0000 2020",
+        "id_str": "1234",
+        "full_text": "Full text with links, etc",
+        "display_text_range": [0, 213],
+        "entities": {
+          "media": [
+            {
+              "id_str": "1234",
+              "indices": [214, 237],
+              "media_url": "http://pbs.twimg.com/media/xxxx.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/xxxx.jpg",
+              "url": "https://t.co/xxxx",
+              "display_url": "pic.twitter.com/xxxx",
+              "expanded_url": "https://twitter.com/ravinwashere/status/xxxx/photo/1",
+              "type": "photo",
+              "original_info": {
+                "width": 1072,
+                "height": 780,
+                "focus_rects": [
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 600,
+                    "w": 1072
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 780
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 684
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 390
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 1072
+                  }
+                ]
+              },
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "large": {
+                  "w": 1072,
+                  "h": 780,
+                  "resize": "fit"
+                },
+                "small": {
+                  "w": 680,
+                  "h": 495,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 1072,
+                  "h": 780,
+                  "resize": "fit"
+                }
+              },
+              "features": {
+                "large": {
+                  "faces": []
+                },
+                "small": {
+                  "faces": []
+                },
+                "medium": {
+                  "faces": []
+                },
+                "orig": {
+                  "faces": []
+                }
+              }
+            }
+          ]
+        },
+        "extended_entities": {
+          "media": [
+            {
+              "id_str": "1234",
+              "indices": [214, 237],
+              "media_url": "http://pbs.twimg.com/media/xxxx.jpg",
+              "media_url_https": "https://pbs.twimg.com/media/xxxx.jpg",
+              "url": "https://t.co/xxxx",
+              "display_url": "pic.twitter.com/xxxx",
+              "expanded_url": "https://twitter.com/xxxx/status/xxxx/photo/1",
+              "type": "photo",
+              "original_info": {
+                "width": 1072,
+                "height": 780,
+                "focus_rects": [
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 600,
+                    "w": 1072
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 780
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 684
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 390
+                  },
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "h": 780,
+                    "w": 1072
+                  }
+                ]
+              },
+              "sizes": {
+                "thumb": {
+                  "w": 150,
+                  "h": 150,
+                  "resize": "crop"
+                },
+                "large": {
+                  "w": 1072,
+                  "h": 780,
+                  "resize": "fit"
+                },
+                "small": {
+                  "w": 680,
+                  "h": 495,
+                  "resize": "fit"
+                },
+                "medium": {
+                  "w": 1072,
+                  "h": 780,
+                  "resize": "fit"
+                }
+              },
+              "features": {
+                "large": {
+                  "faces": []
+                },
+                "small": {
+                  "faces": []
+                },
+                "medium": {
+                  "faces": []
+                },
+                "orig": {
+                  "faces": []
+                }
+              },
+              "media_key": "3_xxxx",
+              "ext_media_color": {
+                "palette": [
+                  {
+                    "rgb": {
+                      "red": 250,
+                      "green": 251,
+                      "blue": 253
+                    },
+                    "percentage": 96.31
+                  },
+                  {
+                    "rgb": {
+                      "red": 119,
+                      "green": 172,
+                      "blue": 234
+                    },
+                    "percentage": 1.71
+                  },
+                  {
+                    "rgb": {
+                      "red": 66,
+                      "green": 71,
+                      "blue": 75
+                    },
+                    "percentage": 1.68
+                  },
+                  {
+                    "rgb": {
+                      "red": 50,
+                      "green": 131,
+                      "blue": 222
+                    },
+                    "percentage": 0.29
+                  }
+                ]
+              },
+              "ext_alt_text": null,
+              "ext_media_availability": {
+                "status": "available"
+              },
+              "ext": {
+                "mediaStats": {
+                  "r": "Missing",
+                  "ttl": -1
+                }
+              }
+            }
+          ]
+        },
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "user_id_str": "1234",
+        "retweet_count": 1,
+        "favorite_count": 1,
+        "reply_count": 1,
+        "quote_count": 1,
+        "conversation_id_str": "1",
+        "possibly_sensitive_editable": true,
+        "lang": "en"
+      }
+    }
+  }
+}
