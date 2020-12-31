@@ -5,7 +5,7 @@ from json import JSONDecodeError
 from typing import Dict, List
 
 import sentry_sdk
-from flask import Flask, make_response, render_template, request
+from flask import Flask, make_response, redirect, render_template, request, url_for
 from pydantic import BaseModel, ValidationError
 from sentry_sdk.integrations.flask import FlaskIntegration
 
@@ -16,36 +16,39 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    error = None
+    if request.args.get("error"):
+        error = (
+            "Huh, something is not right with the JSON input. Are you sure "
+            "you copied the right object from the browser console?"
+        )
+    return render_template("index.html", error=error)
 
 
 @app.route("/table", methods=["POST"])
 def table():
-    error = None
     bookmarks_raw = request.form.get("bookmarks", "")
     try:
         bookmarks_json = json.loads(bookmarks_raw)
         bookmarks = parse_bookmarks(bookmarks_json)
     except (KeyError, TypeError, JSONDecodeError, ValidationError):
-        bookmarks = None
-        error = (
-            "Huh, something is not right with the JSON input. Are you sure "
-            "you copied the right object from the browser console?"
-        )
+        return redirect(url_for("index", error="da"))
 
     return render_template(
         "table.html",
         bookmarks=bookmarks,
         bookmarks_raw=bookmarks_raw,
-        error=error,
     )
 
 
 @app.route("/export", methods=["POST"])
 def export():
     bookmarks_raw = request.form["bookmarks"]
-    bookmarks = parse_bookmarks(json.loads(bookmarks_raw))
-    bookmarks_csv = bookmarks_to_csv(bookmarks)
+    try:
+        bookmarks = parse_bookmarks(json.loads(bookmarks_raw))
+        bookmarks_csv = bookmarks_to_csv(bookmarks)
+    except (KeyError, TypeError, JSONDecodeError, ValidationError):
+        return redirect(url_for("index", error="da"))
     output = make_response(bookmarks_csv)
     output.headers["Content-Disposition"] = "attachment; filename=bookmarks.csv"
     output.headers["Content-type"] = "text/csv"
