@@ -1,22 +1,11 @@
 # Twitter Bookmarks To CSV
 
-Convert Twitter Bookmarks from JSON to CSV
+A web service to export Twitter Bookmarks from JSON to CSV
 
 ## Getting Started
 
-This should include a small (often the most basic) example of how to use the project,
-along with some steps on how to install it, if necessary.
+Watch the video to see how to export Twitter bookmarks to CSV.
 
-## Tutorial
+[![Watch the video](https://img.youtube.com/vi/FmsEEWH1SZ0/0.jpg)](https://youtu.be/FmsEEWH1SZ0)
 
-Tutorial includes instructions on how to use the project for common use cases.
-
-## Twitter Bookmarks To CSV API
-
-The API documentation contains the description of the individual functions, methods,
-and components of your project.
-
-## Twitter Bookmarks To CSV Architecture
-
-This section of your documentation describes how your code works, as opposed to how
-to use your code.
+The service is available at [twitter-bookmarks-to-csv.herokuapp.com](https://twitter-bookmarks-to-csv.herokuapp.com/)
