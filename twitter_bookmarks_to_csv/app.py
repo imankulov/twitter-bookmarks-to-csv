@@ -2,7 +2,7 @@ import csv
 import json
 from io import StringIO
 from json import JSONDecodeError
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 import sentry_sdk
 from flask import Flask, make_response, redirect, render_template, request, url_for
@@ -60,12 +60,12 @@ class Bookmark(BaseModel):
     id_str: str
     full_text: str
     user_id_str: str
-    retweet_count: int
-    favorite_count: int
-    reply_count: int
-    quote_count: int
-    conversation_id_str: str
-    lang: str
+    retweet_count: Optional[int]
+    favorite_count: Optional[int]
+    reply_count: Optional[int]
+    quote_count: Optional[int]
+    conversation_id_str: Optional[str]
+    lang: Optional[str]
 
 
 def parse_bookmarks(obj: Dict) -> List[Bookmark]:
